@@ -1,9 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
+import { RootTemplate } from "./templates/RootTemplate";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <RootTemplate />,
+    children: [
+      {
+        path: "/linked-list",
+        element: <div>Linked List</div>,
+      },
+    ],
   },
 ]);
 

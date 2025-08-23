@@ -1,3 +1,7 @@
+import { NavigationWrapper } from "./components/Navigation.Wrapper";
+
 export const Navigation = () => {
-  return <div>Navigation</div>;
+  return <Navigation.Wrapper>123</Navigation.Wrapper>;
 };
+
+Navigation.Wrapper = NavigationWrapper;
