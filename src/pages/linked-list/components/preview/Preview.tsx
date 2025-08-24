@@ -30,7 +30,13 @@ export const Preview = () => {
 
   return (
     <Scene>
-      <OrbitControls />
+      <OrbitControls
+        enablePan={true}
+        enableZoom={true}
+        enableRotate={true}
+        minDistance={5}
+        maxDistance={20}
+      />
       <ambientLight intensity={1} />
       <pointLight position={[4, 5, 5]} intensity={100} />
       {nodes.map((node, index) => (
