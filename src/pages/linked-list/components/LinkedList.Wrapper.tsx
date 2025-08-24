@@ -8,10 +8,11 @@ export const LinkedListWrapper = ({
 }) => {
   const linkedList = useLinkedList();
 
-
   return (
     <LinkedListContext.Provider value={linkedList}>
-      {children}
+      <div className="col-start-3 -col-end-1 row-start-1 -row-end-1 flex flex-col gap-2">
+        {children}
+      </div>
     </LinkedListContext.Provider>
   );
 };
