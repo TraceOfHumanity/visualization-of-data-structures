@@ -1,48 +1,15 @@
-import { Scene } from "@/components/scene/Scene";
-import { OrbitControls } from "@react-three/drei";
-import { useContext } from "react";
-import { LinkedListContext } from "../../context/LinkedListContext";
-import { PreviewNode } from "./Preview.Node";
-import { PreviewPushButton } from "./Preview.PushButton";
+import { Code } from "./components/code/Code";
+import { LinkedListScene } from "./components/linked-list-scene/Linked-list-scene";
+import { PreviewWrapper } from "./components/Preview.Wrapper";
 
 export const Preview = () => {
-  const { length, head } = useContext(LinkedListContext)!;
-
-  const getNodesArray = () => {
-    const nodes: Array<{ value: any; position: [number, number, number] }> = [];
-    let current = head;
-    let index = 0;
-
-    while (current) {
-      const x = index * 3 - (length - 1) * 1.5;
-      nodes.push({
-        value: current.value,
-        position: [x, 0, 0],
-      });
-      current = current.next;
-      index++;
-    }
-
-    return nodes;
-  };
-
-  const nodes = getNodesArray();
-
   return (
-    <Scene>
-      <OrbitControls
-        enablePan={true}
-        enableZoom={true}
-        enableRotate={true}
-        minDistance={5}
-        maxDistance={20}
-      />
-      <ambientLight intensity={1} />
-      <pointLight position={[4, 5, 5]} intensity={100} />
-      {nodes.map((node, index) => (
-        <PreviewNode key={index} value={node.value} position={node.position} />
-      ))}
-      <PreviewPushButton />
-    </Scene>
+    <Preview.Wrapper>
+      <LinkedListScene />
+      <Preview.Code />
+    </Preview.Wrapper>
   );
 };
+
+Preview.Wrapper = PreviewWrapper;
+Preview.Code = Code;

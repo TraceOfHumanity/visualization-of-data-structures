@@ -2,7 +2,7 @@ import { useFrame, type Vector3 } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import type { LinkedListNodeType } from "../../types/linkedListTypes";
+import type { LinkedListNodeType } from "../../../../types/linkedListTypes";
 
 type LinkedListNodeProps = {
   value: LinkedListNodeType<number>["value"];

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LinkedListContext } from "../../context/LinkedListContext";
+import { LinkedListContext } from "../../../../context/LinkedListContext";
 import { Text } from "@react-three/drei";
 import type { Vector3 } from "@react-three/fiber";
 

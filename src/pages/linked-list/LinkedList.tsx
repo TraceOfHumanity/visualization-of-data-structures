@@ -2,7 +2,7 @@ import { LinkedListWrapper } from "./components/LinkedList.Wrapper";
 import { LinkedListHeader } from "./components/LinkedList.Header";
 import { Preview } from "./components/preview/Preview";
 import { Info } from "./components/info/Info";
-import { Code } from "./components/code/Code";
+import { Code } from "./components/preview/components/code/Code";
 
 export const LinkedList = () => {
   return (

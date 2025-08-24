@@ -10,7 +10,7 @@ export const LinkedListWrapper = ({
 
   return (
     <LinkedListContext.Provider value={linkedList}>
-      <div className="col-start-3 -col-end-1 row-start-1 -row-end-1 flex flex-col gap-2">
+      <div className="col-start-3 -col-end-1 row-start-1 -row-end-1 flex flex-col gap-2 overflow-hidden">
         {children}
       </div>
     </LinkedListContext.Provider>
