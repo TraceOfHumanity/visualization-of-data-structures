@@ -46,7 +46,7 @@ export const PreviewNode = ({ value, position }: LinkedListNodeProps) => {
         anchorX="center"
         anchorY="middle"
       >
-        value: {value.toString().padEnd(1, "...")}
+        value: {value.toString()}
       </Text>
     </group>
   );
