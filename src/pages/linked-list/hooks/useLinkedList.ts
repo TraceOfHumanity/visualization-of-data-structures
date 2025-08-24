@@ -4,7 +4,7 @@ import type { LinkedListType, LinkedListNodeType } from "../types/linkedListType
 export const useLinkedList = <T>(): LinkedListType<T> => {
   const [head, setHead] = useState<LinkedListNodeType<T> | null>(null);
   const [tail, setTail] = useState<LinkedListNodeType<T> | null>(null);
-  const [length, setLength] = useState(1);
+  const [length, setLength] = useState(0);
 
   const push = (value: T) => {
     const newNode: LinkedListNodeType<T> = { value, next: null };

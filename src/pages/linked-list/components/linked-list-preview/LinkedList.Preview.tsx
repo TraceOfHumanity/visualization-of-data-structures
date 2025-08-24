@@ -1,11 +1,11 @@
 import { Scene } from "@/components/scene/Scene";
-import { OrbitControls } from "@react-three/drei";
+import { Html, OrbitControls } from "@react-three/drei";
 import { useContext } from "react";
 import { LinkedListContext } from "../../context/LinkedListContext";
 import { LinkedListNode } from "./LinkedList.Node";
 
 export const LinkedListPreview = () => {
-  const { length, head } = useContext(LinkedListContext)!;
+  const { length, head, push } = useContext(LinkedListContext)!;
 
   const getNodesArray = () => {
     const nodes: Array<{ value: any; position: [number, number, number] }> = [];
@@ -39,6 +39,9 @@ export const LinkedListPreview = () => {
           position={node.position}
         />
       ))}
+      <Html position={[length * 3 - (length - 1) * 1.5, 0, 0]}>
+        <button onClick={() => push(length + 1)}>push node</button>
+      </Html>
     </Scene>
   );
 };

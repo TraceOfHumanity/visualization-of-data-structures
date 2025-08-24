@@ -10,7 +10,7 @@ export const LinkedListNode = ({ value, position }: LinkedListNodeProps) => {
   console.log(value);
   return (
     <mesh position={position}>
-      <boxGeometry args={[1, 1, 1]} />
+      <sphereGeometry args={[1, 16, 16]} />
       <meshStandardMaterial color="green" />
     </mesh>
   );
