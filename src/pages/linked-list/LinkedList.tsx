@@ -1,6 +1,6 @@
 import { LinkedListWrapper } from "./components/LinkedList.Wrapper";
 import { LinkedListHeader } from "./components/LinkedList.Header";
-import { LinkedListPreview } from "./components/linked-list-preview/LinkedList.Preview";
+import { Preview } from "./components/preview/Preview";
 
 export const LinkedList = () => {
   return (
@@ -13,4 +13,4 @@ export const LinkedList = () => {
 
 LinkedList.Wrapper = LinkedListWrapper;
 LinkedList.Header = LinkedListHeader;
-LinkedList.Preview = LinkedListPreview;
+LinkedList.Preview = Preview;
