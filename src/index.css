@@ -3,6 +3,8 @@
 @theme {
   --color-main-background: #111111;
   --color-main-text: #eeeeee;
+  --color-background-from: #c2f5e0;
+  --color-background-to: #f7aeb5;
 }
 
 body {

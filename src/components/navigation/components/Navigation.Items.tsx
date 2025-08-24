@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { NavigationContext } from "../context/NavigationContext";
-import { NavLink } from "react-router";
+import { NavigationItem } from "./Navigation.Item";
 
 export const NavigationItems = () => {
   const { navigationItems } = useContext(NavigationContext)!;
@@ -8,9 +8,7 @@ export const NavigationItems = () => {
   return (
     <div className="flex flex-col gap-2">
       {navigationItems.map((item) => (
-        <NavLink key={item.path} to={item.path}>
-          {item.label}
-        </NavLink>
+        <NavigationItem key={item.path} {...item} />
       ))}
     </div>
   );
