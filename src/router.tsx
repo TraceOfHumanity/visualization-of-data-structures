@@ -1,5 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { RootTemplate } from "./templates/RootTemplate";
+import {
+  Graph,
+  HashTable,
+  Heap,
+  LinkedList,
+  Queue,
+  Stack,
+  Tree,
+} from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -8,7 +17,31 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/linked-list",
-        element: <div>Linked List</div>,
+        element: <LinkedList />,
+      },
+      {
+        path: "/stack",
+        element: <Stack />,
+      },
+      {
+        path: "/queue",
+        element: <Queue />,
+      },
+      {
+        path: "/tree",
+        element: <Tree />,
+      },
+      {
+        path: "/graph",
+        element: <Graph />,
+      },
+      {
+        path: "/hash-table",
+        element: <HashTable />,
+      },
+      {
+        path: "/heap",
+        element: <Heap />,
       },
     ],
   },
