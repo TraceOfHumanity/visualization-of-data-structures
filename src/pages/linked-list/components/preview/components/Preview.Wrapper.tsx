@@ -1,3 +1,3 @@
 export const PreviewWrapper = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
+  return <div className="flex gap-2">{children}</div>;
 };

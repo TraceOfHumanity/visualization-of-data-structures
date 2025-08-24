@@ -1,8 +1,8 @@
 import { LinkedListWrapper } from "./components/LinkedList.Wrapper";
 import { LinkedListHeader } from "./components/LinkedList.Header";
-import { Preview } from "./components/preview/Preview";
 import { Info } from "./components/info/Info";
 import { Code } from "./components/preview/components/code/Code";
+import { Preview } from "./components/preview/Preview";
 
 export const LinkedList = () => {
   return (
@@ -10,10 +10,7 @@ export const LinkedList = () => {
       <LinkedList.Header />
       <div className="flex flex-col gap-2">
         <LinkedList.Info />
-        <div className="flex gap-2">
-          <LinkedList.Preview />
-          <LinkedList.Code />
-        </div>
+        <LinkedList.Preview />
       </div>
     </LinkedList.Wrapper>
   );
