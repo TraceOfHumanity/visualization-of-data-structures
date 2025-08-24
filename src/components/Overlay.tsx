@@ -9,7 +9,7 @@ export const Overlay = ({ children, className }: OverlayProps) => {
   return (
     <div
       className={cn(
-        "bg-white/5 backdrop-blur-sm border-white border rounded",
+        "bg-white/4 backdrop-blur-sm border-white border rounded",
         className,
       )}
     >
