@@ -1,11 +1,11 @@
-export type LinkedListNode<T> = {
+export type LinkedListNodeType<T> = {
   value: T;
-  next: LinkedListNode<T> | null;
+  next: LinkedListNodeType<T> | null;
 };
 
-export type LinkedList<T> = {
-  head: LinkedListNode<T> | null;
-  tail: LinkedListNode<T> | null;
+export type LinkedListType<T> = {
+  head: LinkedListNodeType<T> | null;
+  tail: LinkedListNodeType<T> | null;
   length: number;
   push: (value: T) => void;
 };

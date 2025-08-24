@@ -1,13 +1,13 @@
 import { useState } from "react";
-import type { LinkedList, LinkedListNode } from "../types/linkedListTypes";
+import type { LinkedListType, LinkedListNodeType } from "../types/linkedListTypes";
 
-export const useLinkedList = <T>(): LinkedList<T> => {
-  const [head, setHead] = useState<LinkedListNode<T> | null>(null);
-  const [tail, setTail] = useState<LinkedListNode<T> | null>(null);
-  const [length, setLength] = useState(0);
+export const useLinkedList = <T>(): LinkedListType<T> => {
+  const [head, setHead] = useState<LinkedListNodeType<T> | null>(null);
+  const [tail, setTail] = useState<LinkedListNodeType<T> | null>(null);
+  const [length, setLength] = useState(1);
 
   const push = (value: T) => {
-    const newNode: LinkedListNode<T> = { value, next: null };
+    const newNode: LinkedListNodeType<T> = { value, next: null };
     if (!head) {
       setHead(newNode);
       setTail(newNode);
