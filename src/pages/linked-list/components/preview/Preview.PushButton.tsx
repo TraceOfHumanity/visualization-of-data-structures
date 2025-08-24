@@ -15,7 +15,7 @@ export const PreviewPushButton = () => {
     <group position={position}>
       <mesh onClick={() => push(length + 1)}>
         <sphereGeometry args={[0.5, 16, 16]} />
-        <meshStandardMaterial color="#67C090" />
+        <meshStandardMaterial color="#253900" />
       </mesh>
       <Text
         position={[0, 0, 0.5]}
